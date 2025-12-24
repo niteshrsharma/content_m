@@ -1,10 +1,22 @@
 import Navigation from "./components/navigation/Navigation";
+import {BrowserRouter as Router, Routes, Route} from "react-router-dom";
+import ViewContent from "./pages/view_content/ViewContent";
+import CreateContent from "./pages/create_content/CreateContent";
+import Content from "./pages/content/Content";
 
 export default function App() {
   return (
     <>
-      <Navigation/>
-      <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Aperiam alias error, facere dolore illum libero! Minima cumque ullam, excepturi repudiandae eveniet iure officiis pariatur non optio voluptatem doloribus ut quam.</p>
+      <Router>
+        <Navigation/>
+        <div className="main-cont">
+          <Routes>
+            <Route path="/" element={<ViewContent/>}/>
+            <Route path="/create-content" element={<CreateContent/>}/>
+            <Route path="/content/:id" element={<Content/>}/>
+          </Routes>
+        </div>
+      </Router>
     </>
   );
 }

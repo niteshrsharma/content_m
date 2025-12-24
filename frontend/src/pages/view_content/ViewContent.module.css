@@ -1,0 +1,10 @@
+.viewCont{
+    display: flex;
+    flex-wrap: wrap;
+    justify-self: center;
+    align-items: center;
+}
+
+.viewCont>*{
+    margin: 20px;
+}
