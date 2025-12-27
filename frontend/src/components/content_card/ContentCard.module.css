@@ -1,5 +1,40 @@
 .cont{
     width: 21rem;
-    height: 23rem;
-    background-color: green;
+    min-height: 23rem;
+    padding: 20px;
+    background-color: rgb(155, 157, 155);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 21px;
+}
+
+.cont>img{
+    border-radius: 21px;
+    margin: 5px;
+}
+
+
+.cont>h2{
+    text-align: center;
+    font-size: 19px;
+    padding: 9px;
+}
+
+.cont>p{
+    text-align: justify;
+}
+
+.userInfo{
+    width: 100%;
+    padding: 10px;
+    font-weight: bolder;
+}
+
+.actions>*{
+    margin: 10px;
+    padding: 4px;
+    border-radius: 12px;
+    border: none;
 }

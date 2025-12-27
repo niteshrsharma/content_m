@@ -12,15 +12,15 @@ export default function ContentCard({content}){
             <p>{content.body}</p>
 
             <div className={styles.userInfo}>
-                <span>By User: {content.user_id}</span>
+                <span>By User: Rohit</span>
             </div>
 
             <div className={styles.actions}>
                 <button>Like: 12</button>
                 <button>Dislike: 2</button>
+                <button onClick={()=>navigate(`/content/${content.id}`)}>View Full Story</button>
             </div>
 
-            <button onClick={()=>navigate(`/content/${content.id}`)}>View Full Story</button>
         </div>
     )
 }

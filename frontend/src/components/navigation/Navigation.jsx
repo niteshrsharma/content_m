@@ -6,7 +6,7 @@ import { useNavigate } from 'react-router-dom';
 export default function Navigation() {
     const [selectedType, selectType] = useState('Stories');
     const navigate = useNavigate();
-    let loggedIn = true;
+    let loggedIn = false;
 
     return (
         <>
@@ -21,7 +21,7 @@ export default function Navigation() {
                     <span className={selectedType === 'Stories' ? styles.active : ''} onClick={() => selectType('Stories')}>Stories</span>
                     <span className={selectedType === 'Facts' ? styles.active : ''} onClick={() => selectType('Facts')}>Facts</span>
                     {
-                        loggedIn ? <span className={styles.auth}>Logout</span> : <span className={styles.auth}>Login</span>
+                        loggedIn ? <span className={styles.auth}>Logout</span> : <span className={styles.auth} onClick={()=>navigate("/auth")}>Login</span>
                     }
                 </div>
             </div>
